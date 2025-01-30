@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  timeLimit: 300
+  timeLimit: 45
   timerText: {fileID: 9174426606338930510}
   requiredCollectables: 5
   currentCollectables: 0
