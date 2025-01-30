@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("Timer")]
     public float timer;
     public float timeLimit;
     public TMP_Text timerText;
 
+    [Header("Collectables")]
+    public int requiredCollectables;
+    public int currentCollectables;
+    public TMP_Text collectablesText;
+
+
     // Start is called before the first frame update
+
     void Start()
     {
         timer = timeLimit;
@@ -19,6 +26,13 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        GameTimer();
+        Collectables();
+
+    }
+
+    void GameTimer()
     {
         timerText.text = timer.ToString("F2");
 
@@ -31,6 +45,16 @@ public class GameManager : MonoBehaviour
     
         {
         timer -= Time.deltaTime;
+        }
+    }
+
+    void Collectables()
+    {
+        collectablesText.text = currentCollectables + " / " + requiredCollectables;
+
+        if(currentCollectables == requiredCollectables)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
