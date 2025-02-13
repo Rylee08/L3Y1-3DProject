@@ -62710,12 +62710,12 @@ PrefabInstance:
     - target: {fileID: 3186442616858898056, guid: 7215bd2fee688b845bc05d4cb1cf53db,
         type: 3}
       propertyPath: maxSpeed
-      value: 63
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 3186442616858898056, guid: 7215bd2fee688b845bc05d4cb1cf53db,
         type: 3}
       propertyPath: forwardAccel
-      value: 13.8
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 4493243136155724775, guid: 7215bd2fee688b845bc05d4cb1cf53db,
         type: 3}
